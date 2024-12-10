@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import registerLottie from "../assets/lottie/register.json"
+import loginLottie from "../assets/lottie/login.json"
 import { useContext } from "react";
 import { AuthContext } from "../Auth/AuthProvider";
 
@@ -23,7 +23,7 @@ const SignIn = () => {
     <div className="hero bg-base-200 py-20">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
-          <Lottie className="max-w-2xl" animationData={registerLottie} loop={true}></Lottie>
+          <Lottie className="max-w-2xl" animationData={loginLottie} loop={true}></Lottie>
         </div>
         <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
           <form onSubmit={handleSignInSubmit} className="card-body">

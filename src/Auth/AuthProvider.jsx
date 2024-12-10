@@ -10,14 +10,17 @@ const AuthProvider = ({children}) => {
 
 
     const handleRegister = ( email, password ) => {
+        setLoader(true)
         return createUserWithEmailAndPassword( auth , email, password)
     }
 
     const handleSignIn = ( email, password ) =>{
+        setLoader(true)
         return signInWithEmailAndPassword( auth, email, password)
     }
 
     const handleSignOut = () =>{
+        setLoader(true)
         return signOut( auth )
     }
 
