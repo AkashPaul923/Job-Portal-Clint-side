@@ -2,9 +2,13 @@ import Lottie from "lottie-react";
 import loginLottie from "../assets/lottie/login.json"
 import { useContext } from "react";
 import { AuthContext } from "../Auth/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SignIn = () => {
     const { handleSignIn } = useContext( AuthContext)
+    const location = useLocation()
+    // console.log(location.state);
+    const navigate = useNavigate()
     const handleSignInSubmit = e => {
         e.preventDefault()
         const form = e.target
@@ -14,6 +18,7 @@ const SignIn = () => {
         handleSignIn( email, password )
         .then((res) =>{
             // toast.success("Successfully register")
+            navigate( location?.state ? location.state : "/")
         })
         .catch(() =>{
             // toast.error("User already exist")
