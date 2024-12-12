@@ -8,6 +8,7 @@ const Navbar = () => {
     const { user, handleSignOut } = useContext(AuthContext)
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/alljobs">All Jobs</NavLink></li>
     </>
 
 
