@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const JobCard = ({job}) => {
     const {_id,title,company,description,company_logo,location,requirements,jobType,salaryRange} = job
   return (
-    <div className="card bg-base-100 shadow-lg p-4">
+    <div className="card bg-base-200 hover:bg-base-300 shadow-lg p-4">
       <div className="flex items-center mb-4">
         <img
           src={company_logo}

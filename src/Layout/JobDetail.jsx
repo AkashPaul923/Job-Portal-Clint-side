@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const JobDetail = () => {
     const job = useLoaderData()
@@ -65,7 +65,7 @@ const JobDetail = () => {
 
       {/* Footer */}
       <div className="flex justify-between items-center mt-6">
-        <button className="btn btn-primary">Apply Now</button>
+        <Link to={`/applyjob/${_id}`} className="btn btn-primary">Apply Now</Link>
         <button className="btn btn-secondary">Save Job</button>
       </div>
     </div>
