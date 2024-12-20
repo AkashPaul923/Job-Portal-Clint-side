@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         {
           path: '/job-applications/:email',
           element: <PrivateRoute><MyApplication></MyApplication></PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/job-applications/${params.email}`)
+          // loader: ({params})=> fetch(`http://localhost:5000/job-applications/${params.email}`)
         },
         {
           path: '/add-job',

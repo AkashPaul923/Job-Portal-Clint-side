@@ -1,9 +1,19 @@
-import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 
 const MyApplication = () => {
-    const data = useLoaderData()
+    // const data = useLoaderData()
+    const data = []
+    const {email} = useParams()
     const [jobs, setJobs] = useState(data)
+
+    useEffect(()=>{
+      axios.get(`http://localhost:5000/job-applications/${email}`, {withCredentials: true})
+      .then(res => setJobs(res.data))
+    },[])
+
   return (
     <div className="overflow-x-auto max-w-7xl mx-auto my-24 min-h-[600px]">
         <p className="text-2xl font-bold text-center mb-7 ">Total Application: ({jobs.length}) </p>

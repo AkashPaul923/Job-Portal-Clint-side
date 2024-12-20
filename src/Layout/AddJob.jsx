@@ -47,6 +47,12 @@ const AddJob = () => {
         />
         <input
           type="text"
+          name="company"
+          placeholder="Company Name"
+          className="input input-bordered w-full"
+        />
+        <input
+          type="text"
           name="location"
           placeholder="Location"
           className="input input-bordered w-full"
@@ -125,19 +131,19 @@ const AddJob = () => {
         </select>
         <input
           type="email"
-          name="hrEmail"
+          name="hr_email"
           placeholder="HR Email"
           className="input input-bordered w-full"
         />
         <input
           type="text"
-          name="hrName"
+          name="hr_name"
           placeholder="HR Name"
           className="input input-bordered w-full"
         />
         <input
           type="text"
-          name="companyLogo"
+          name="company_logo"
           placeholder="Company Logo URL"
           className="input input-bordered w-full"
         />
