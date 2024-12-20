@@ -19,11 +19,11 @@ const SignIn = () => {
         handleSignIn( email, password )
         .then((res) =>{
             // toast.success("Successfully register")
-            const user = { email: email}
-            axios.post('http://localhost:5000/jwt', user , {withCredentials: true})
-            .then(res =>{
-              console.log(res.data)
-            })
+            // const user = { email: email}
+            // axios.post('http://localhost:5000/jwt', user , {withCredentials: true})
+            // .then(res =>{
+            //   console.log(res.data)
+            // })
             // navigate( location?.state ? location.state : "/")
         })
         .catch(() =>{
