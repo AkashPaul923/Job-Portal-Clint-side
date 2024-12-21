@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import useAxiosSecure from "../Hooks/useAxiosSecure";
 // import { useLoaderData } from "react-router-dom";
 
 const MyApplication = () => {
@@ -9,9 +10,15 @@ const MyApplication = () => {
     const {email} = useParams()
     const [jobs, setJobs] = useState(data)
 
+    const axiosSecure = useAxiosSecure()
+
     useEffect(()=>{
-      axios.get(`http://localhost:5000/job-applications/${email}`, {withCredentials: true})
+      // axios.get(`http://localhost:5000/job-applications/${email}`, {withCredentials: true})
+      // .then(res => setJobs(res.data))
+
+      axiosSecure.get(`/job-applications/${email}`)
       .then(res => setJobs(res.data))
+
     },[])
 
   return (
